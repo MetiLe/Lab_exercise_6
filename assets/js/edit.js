@@ -55,7 +55,15 @@ document.addEventListener('DOMContentLoaded', () => {
 
     form.addEventListener('submit', updateTask);
 
-   
+    function updateTask(e) {
+        e.preventDefault();
+        // Check empty entry
+        if (taskInput.value === '') {
+            taskInput.style.borderColor = "red";
+
+            return;
+        }
+
         /* 
         Instruction set to handle Update
 
